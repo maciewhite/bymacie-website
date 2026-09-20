@@ -6,14 +6,13 @@
 <title>Shop | By Macie</title>
 <meta name="description" content="Shop custom embroidered pieces by Macie.">
 <style>
-:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e8dfd6;--rose:#ead8d4}
+:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e8dfd6}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{text-decoration:none;color:inherit}
-.top{background:var(--ink);color:white;text-align:center;padding:10px;font-size:13px;letter-spacing:.08em}
+.top{background:var(--ink);color:#fff;text-align:center;padding:10px;font-size:13px;letter-spacing:.08em}
 nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.96);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:18px 6%;border-bottom:1px solid var(--line)}
 .logo img{width:180px;max-width:42vw;display:block}.navlinks{display:flex;gap:28px;font-size:14px}.navlinks a:hover{opacity:.55}
 main{padding:70px 7% 90px}.intro{text-align:center;max-width:720px;margin:0 auto 55px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted);font-weight:bold}.intro h1{font-family:Georgia,serif;font-weight:500;font-size:clamp(48px,6vw,76px);line-height:.95;margin:16px 0}.intro p{color:var(--muted);font-size:17px;line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1100px;margin:0 auto}.product{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(41,37,34,.06);display:flex;flex-direction:column}.photo{aspect-ratio:1/1;overflow:hidden;background:#eee8e1}.photo img{width:100%;height:100%;object-fit:cover;display:block}.info{padding:24px}.info h2{font-family:Georgia,serif;font-weight:500;font-size:30px;margin:0 0 8px}.price{font-size:16px;color:var(--muted);margin-bottom:18px}.desc{color:#625b56;line-height:1.6;margin:0 0 20px}.btn{display:inline-block;background:var(--ink);color:white;padding:14px 22px;border-radius:999px;font-size:14px;font-weight:bold}.btn:hover{opacity:.88}
-.note{text-align:center;color:var(--muted);margin:55px auto 0;max-width:620px;line-height:1.6}
+.products{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;max-width:1100px;margin:0 auto}.product{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(41,37,34,.06);display:flex;flex-direction:column}.photo{aspect-ratio:1/1;overflow:hidden;background:#eee8e1}.photo img{width:100%;height:100%;object-fit:cover;display:block}.info{padding:24px}.info h2{font-family:Georgia,serif;font-weight:500;font-size:30px;margin:0 0 8px}.price{font-size:16px;color:var(--muted);margin-bottom:18px}.desc{color:#625b56;line-height:1.6;margin:0 0 20px}.btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 22px;border-radius:999px;font-size:14px;font-weight:bold}.btn:hover{opacity:.88}.note{text-align:center;color:var(--muted);margin:55px auto 0;max-width:620px;line-height:1.6}
 footer{padding:28px 7%;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
 @media(max-width:700px){.navlinks{display:none}.products{grid-template-columns:1fr}.intro{margin-bottom:35px}main{padding:50px 5% 70px}.info h2{font-size:27px}footer{flex-direction:column;gap:8px}}
 </style>
@@ -21,8 +20,8 @@ footer{padding:28px 7%;border-top:1px solid var(--line);display:flex;justify-con
 <body>
 <div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED BY MACIE</div>
 <nav>
-<a class="logo" href="index.html"><img src="logo.png" alt="Embroidery By Macie"></a>
-<div class="navlinks"><a href="shop.html">Shop</a><a href="index.html#custom">Custom</a><a href="index.html#about">About</a><a href="order.html?product=Football%20Bear">Contact</a></div>
+<a class="logo" href="index.html"><img src="logo-transparent.png" alt="Embroidery By Macie"></a>
+<div class="navlinks"><a href="shop.html">Shop</a><a href="index.html#custom">Custom</a><a href="about.html">About</a><a href="order.html">Contact</a></div>
 </nav>
 <main>
 <div class="intro">
@@ -40,12 +39,12 @@ footer{padding:28px 7%;border-top:1px solid var(--line);display:flex;justify-con
 <div class="info"><h2>Custom Pickleball Bag with Name</h2><div class="price">$30</div><p class="desc">A personalized pickleball bag embroidered with the name of your choice.</p><a class="btn" href="order.html?product=Custom%20Pickleball%20Bag%20with%20Name">Order Now</a></div>
 </article>
 <article class="product">
-<div class="photo"><img src="custom-design.jpg" alt="Examples of custom embroidered pieces"></div>
-<div class="info"><h2>Custom Design</h2><div class="price">$30+</div><p class="desc">Have something else in mind? Choose your item, design, colors, and text and let's create it together.</p><a class="btn" href="order.html?product=Custom%20Design">Request Yours</a></div>
-</article>
-<article class="product">
 <div class="photo"><img src="custom-tote.jpg" alt="Custom tote with embroidered text"></div>
 <div class="info"><h2>Custom Tote with Text</h2><div class="price">$25</div><p class="desc">Choose your text, thread color, and bag color for a personalized everyday tote.</p><a class="btn" href="order.html?product=Custom%20Tote%20with%20Text">Order Now</a></div>
+</article>
+<article class="product">
+<div class="photo"><img src="custom-design.jpg" alt="Examples of custom embroidered pieces"></div>
+<div class="info"><h2>Custom Design</h2><div class="price">$30+</div><p class="desc">Have something else in mind? Choose your item, design, colors, and text and let's create it together.</p><a class="btn" href="order.html?product=Custom%20Design">Request Yours</a></div>
 </article>
 </div>
 <p class="note">Don't see exactly what you're looking for? My Custom Design option is for anything from sweatshirts and totes to names, initials, hobbies, teams, and more.</p>
