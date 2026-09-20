@@ -35,7 +35,7 @@
     .section-head p{max-width:440px;color:var(--muted);line-height:1.6}
     .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
     .product{background:var(--white);border-radius:18px;overflow:hidden}
-    .photo{aspect-ratio:1/1;background:#e8e2dc;display:grid;place-items:center;color:#8d837b;font-size:11px;letter-spacing:.12em}
+    .photo{aspect-ratio:1/1;background:#e8e2dc;overflow:hidden;display:grid;place-items:center;color:#8d837b;font-size:11px;letter-spacing:.12em}.photo img{width:100%;height:100%;object-fit:cover;display:block}
     .product-info{padding:18px}.product h3{margin:0 0 8px;font-size:17px}.price{color:var(--muted);font-size:14px}
     .about{background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
     .about-box{background:var(--tan);min-height:420px;border-radius:20px;display:grid;place-items:center;color:#66584f;letter-spacing:.12em;font-size:12px}
@@ -56,7 +56,7 @@
   <nav>
     <a class="logo" href="#"><img src="logo.png" alt="Embroidery By Macie"></a>
     <div class="navlinks">
-      <a href="#shop">Shop</a><a href="#custom">Custom</a><a href="#about">About</a><a href="#contact">Contact</a>
+      <a href="shop.html">Shop</a><a href="#custom">Custom</a><a href="#about">About</a><a href="#contact">Contact</a>
     </div>
   </nav>
 
@@ -67,7 +67,7 @@
         <h1>Made just<br>for you.</h1>
         <p>Custom embroidered sweatshirts, sorority designs, game day pieces and more — thoughtfully made by Macie.</p>
         <div class="buttons">
-          <a class="btn dark" href="#shop">Shop the collection</a>
+          <a class="btn dark" href="shop.html">Shop the collection</a>
           <a class="btn light" href="#custom">Request a custom piece</a>
         </div>
       </div>
@@ -81,13 +81,13 @@
     <section id="shop">
       <div class="section-head">
         <h2>Shop favorites</h2>
-        <p>Replace these photo placeholders with your product photos. Each card can link to your order form or checkout page.</p>
+        <p>A few of my current favorites. See the full collection for details and ordering.</p>
       </div>
       <div class="products">
-        <article class="product"><div class="photo">PRODUCT PHOTO</div><div class="product-info"><h3>Custom Game Day Sweatshirt</h3><div class="price">From $45</div></div></article>
-        <article class="product"><div class="photo">PRODUCT PHOTO</div><div class="product-info"><h3>Embroidered Sorority House</h3><div class="price">From $35</div></div></article>
-        <article class="product"><div class="photo">PRODUCT PHOTO</div><div class="product-info"><h3>Personalized Makeup Bag</h3><div class="price">From $22</div></div></article>
-        <article class="product"><div class="photo">PRODUCT PHOTO</div><div class="product-info"><h3>Custom Tote</h3><div class="price">From $28</div></div></article>
+        <a class="product" href="shop.html"><div class="photo"><img src="football-bear.jpg" alt="Football Bear sweatshirt"></div><div class="product-info"><h3>Football Bear</h3><div class="price">$30</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="pickleball-bag.jpg" alt="Custom pickleball bag"></div><div class="product-info"><h3>Custom Pickleball Bag</h3><div class="price">$30</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="custom-design.jpg" alt="Custom embroidered designs"></div><div class="product-info"><h3>Custom Design</h3><div class="price">$30+</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="custom-tote.jpg" alt="Custom tote with text"></div><div class="product-info"><h3>Custom Tote with Text</h3><div class="price">$25</div></div></a>
       </div>
     </section>
 
