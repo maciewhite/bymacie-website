@@ -5,28 +5,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About | By Macie</title>
 <style>
+:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e8dfd6}
 *{box-sizing:border-box}
-body{margin:0;background:#faf7f1;color:#3f403c;font-family:Arial,Helvetica,sans-serif}
-header{background:#faf7f1;border-bottom:1px solid #ded9d0;min-height:120px;display:flex;align-items:center;justify-content:space-between;padding:22px 7%;gap:30px}
-.brand{color:#111;text-decoration:none;line-height:.9}.brand-top{display:block;font-size:14px;letter-spacing:7px;margin-bottom:6px}.brand-main{display:block;font-family:Georgia,"Times New Roman",serif;font-size:44px;letter-spacing:-2px}
-nav{display:flex;gap:36px;align-items:center}nav a{color:#536257;text-decoration:none;font-size:14px;letter-spacing:2px}
-.about{max-width:1150px;margin:65px auto;padding:0 35px;display:grid;grid-template-columns:minmax(300px,1fr) minmax(320px,1fr);gap:70px;align-items:center}
-.photo-wrap{background:#e8e1d8;padding:12px;border-radius:18px}.photo-wrap img{width:100%;display:block;border-radius:10px}
-.copy h1{margin:0 0 24px;font-family:Georgia,"Times New Roman",serif;font-size:50px;font-weight:400;color:#30332f}.copy .eyebrow{margin:0 0 12px;font-size:13px;letter-spacing:4px;color:#68746b;font-weight:700}
-.copy p{font-size:17px;line-height:1.8;margin:0 0 18px;color:#5d5c58}.signature{margin-top:28px;font-family:Georgia,"Times New Roman",serif;font-size:25px;color:#536257}
-.cta{display:inline-block;margin-top:14px;padding:13px 25px;border:1px solid #536257;color:#536257;text-decoration:none;letter-spacing:2px;font-size:13px}
-@media(max-width:760px){header{flex-direction:column;align-items:flex-start;padding:24px}nav{gap:18px;flex-wrap:wrap}.about{grid-template-columns:1fr;margin:40px auto;gap:42px;padding:0 22px}.copy h1{font-size:40px}.brand-main{font-size:40px}}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}
+.top{background:var(--ink);color:#fff;text-align:center;padding:10px;font-size:13px;letter-spacing:.08em}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 6%;background:rgba(251,247,241,.97);border-bottom:1px solid var(--line)}
+.logo img{width:180px;max-width:42vw;display:block}
+.navlinks{display:flex;gap:28px;font-size:14px}.navlinks a:hover{opacity:.55}
+main{padding:75px 7% 90px}
+.about{max-width:1150px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.photo-wrap{background:#e8e1d8;padding:12px;border-radius:18px}
+.photo-wrap img{width:100%;display:block;border-radius:10px}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted);font-weight:bold}
+.copy h1{margin:16px 0 26px;font-family:Georgia,"Times New Roman",serif;font-size:52px;font-weight:500;line-height:.98}
+.copy p{font-size:17px;line-height:1.8;margin:0 0 18px;color:#5d5c58}
+.signature{margin-top:28px;font-family:Georgia,"Times New Roman",serif;font-size:25px;color:#536257}
+.cta{display:inline-block;margin-top:14px;padding:13px 25px;border:1px solid #536257;color:#536257;letter-spacing:2px;font-size:13px}
+.cta:hover{background:#536257;color:#fff}
+footer{padding:30px 7%;display:flex;justify-content:space-between;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:760px){.navlinks{display:none}.about{grid-template-columns:1fr}.photo-wrap{max-width:620px;margin:auto}.copy h1{font-size:42px}main{padding:50px 6%}footer{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
-<header>
-<a class="brand" href="index.html" aria-label="By Macie home"><span class="brand-top">EMBROIDERY</span><span class="brand-main">BY MACIE</span></a>
-<nav><a href="index.html">HOME</a><a href="shop.html">SHOP</a><a href="about.html">ABOUT</a><a href="contact.html">CONTACT</a></nav>
-</header>
-<main class="about">
+<div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED BY MACIE</div>
+<nav>
+<a class="logo" href="index.html"><img src="logo-transparent.png" alt="Embroidery By Macie"></a>
+<div class="navlinks"><a href="shop.html">Shop</a><a href="index.html#custom">Custom</a><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+</nav>
+
+<main>
+<div class="about">
 <div class="photo-wrap"><img src="about-macie.jpg" alt="Macie smiling outdoors"></div>
 <section class="copy">
-<p class="eyebrow">MEET BY MACIE</p>
+<div class="eyebrow">Meet By Macie</div>
 <h1>Hi, I'm Macie!</h1>
 <p>I’m a kindergarten teacher in Dallas, and outside of the classroom, I love creating things that are personal and unique. That’s how my love for embroidery turned into By Macie.</p>
 <p>By Macie started as a creative side gig where I could turn my love for embroidery into personalized pieces that feel special and unique.</p>
@@ -34,6 +46,8 @@ nav{display:flex;gap:36px;align-items:center}nav a{color:#536257;text-decoration
 <div class="signature">Made just for you.</div>
 <a class="cta" href="shop.html">SHOP CUSTOM EMBROIDERY</a>
 </section>
+</div>
 </main>
+<footer><div>© 2026 By Macie</div><div>Custom embroidery • Dallas, TX</div></footer>
 </body>
 </html>
