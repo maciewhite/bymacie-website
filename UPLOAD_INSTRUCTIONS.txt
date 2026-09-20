@@ -1,0 +1,15 @@
+BY MACIE — ORDER FORM UPDATE
+
+Upload/replace these files in your GitHub repo root:
+index.html
+shop.html
+order.html
+thanks.html
+bag-color-chart.png
+thread-color-chart.png
+
+Keep your existing product JPGs and logo.png.
+
+After GitHub Pages deploys, test by clicking an Order Now button on the Shop page. The product should already be selected. Then choose bag color + thread color and submit a test order.
+
+FormSubmit may ask you to confirm/activate the email address the first time it receives a form submission.
