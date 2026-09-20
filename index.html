@@ -1,39 +1,132 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>By Macie | Custom Embroidery</title>
-<style>
-:root{--ink:#292522;--cream:#fbf7f1;--rose:#ead8d4;--green:#dfe8d7;--white:#fffdf9;--muted:#746d67}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream)}a{color:inherit;text-decoration:none}
-.top{background:var(--ink);color:#fff;text-align:center;padding:10px;font-size:13px;letter-spacing:.08em}
-nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.96);display:flex;align-items:center;justify-content:space-between;padding:18px 6%;border-bottom:1px solid #e8dfd6}
-.logo img{width:180px;max-width:42vw;display:block}.navlinks{display:flex;gap:28px;font-size:14px}
-.hero{min-height:78vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px 7%;gap:55px}
-.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted);font-weight:bold}
-h1{font-family:Georgia,serif;font-size:clamp(54px,7vw,92px);line-height:.92;margin:16px 0 24px;font-weight:500}
-.hero p{font-size:18px;line-height:1.6;max-width:510px;color:#5f5853}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{padding:15px 23px;border-radius:999px;font-size:14px;font-weight:bold;display:inline-block}.dark{background:var(--ink);color:#fff}.light{border:1px solid #cfc4bb}
-.hero-card{background:var(--rose);min-height:510px;border-radius:240px 240px 25px 25px;display:flex;align-items:center;justify-content:center;padding:35px}
-.mockup{width:78%;height:390px;background:var(--green);border-radius:18px;display:flex;align-items:center;justify-content:center;padding:30px}.mockup img{width:88%;max-height:100%;object-fit:contain}
-section{padding:90px 7%}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}h2{font-family:Georgia,serif;font-size:48px;font-weight:500;margin:0}.section-head p{max-width:440px;color:var(--muted);line-height:1.6}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:var(--white);border-radius:18px;overflow:hidden}.photo{aspect-ratio:1/1;background:#e8e2dc;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}.product-info{padding:18px}.product h3{margin:0 0 8px;font-size:17px}.price{color:var(--muted);font-size:14px}
-.about{background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.about-box{background:#d9c1ae;min-height:420px;border-radius:20px;overflow:hidden}.about-box img{width:100%;height:100%;min-height:420px;object-fit:cover;display:block}.about p{color:#625b56;line-height:1.8;font-size:17px}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{border-top:1px solid #cfc4bb;padding-top:20px}.num{font-family:Georgia,serif;font-size:34px}.cta{background:var(--ink);color:#fff;text-align:center}.cta p{color:#d9d2cc;max-width:550px;margin:15px auto 25px;line-height:1.6}
-footer{padding:30px 7%;display:flex;justify-content:space-between;color:var(--muted);font-size:13px}
-@media(max-width:800px){.navlinks{display:none}.hero,.about{grid-template-columns:1fr}.hero{padding-top:45px}.hero-card{min-height:400px}.products{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}h2{font-size:38px}}
-</style></head><body>
-<div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED WITH LOVE</div>
-<nav><a class="logo" href="index.html"><img src="logo.png" alt="Embroidery By Macie"></a><div class="navlinks"><a href="shop.html">Shop</a><a href="#custom">Custom</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
-<main>
-<section class="hero"><div><div class="eyebrow">Custom embroidery</div><h1>Made just<br>for you.</h1><p>Custom embroidered pieces, personalized designs, and more — thoughtfully made by Macie.</p><div class="buttons"><a class="btn dark" href="shop.html">Shop the collection</a><a class="btn light" href="#custom">Request a custom piece</a></div></div>
-<div class="hero-card"><div class="mockup"><img src="logo.png" alt="Embroidery By Macie logo"></div></div></section>
-<section id="shop"><div class="section-head"><h2>Shop favorites</h2><p>A few of my current favorites. See the full collection for details and ordering.</p></div><div class="products">
-<a class="product" href="shop.html"><div class="photo"><img src="football-bear.jpg" alt="Football Bear sweatshirt"></div><div class="product-info"><h3>Football Bear</h3><div class="price">$30</div></div></a>
-<a class="product" href="shop.html"><div class="photo"><img src="pickleball-bag.jpg" alt="Custom pickleball bag"></div><div class="product-info"><h3>Custom Pickleball Bag</h3><div class="price">$30</div></div></a>
-<a class="product" href="shop.html"><div class="photo"><img src="custom-tote.jpg" alt="Custom tote with text"></div><div class="product-info"><h3>Custom Tote with Text</h3><div class="price">$25</div></div></a>
-<a class="product" href="shop.html"><div class="photo"><img src="custom-design.jpg" alt="Custom embroidered designs"></div><div class="product-info"><h3>Custom Design</h3><div class="price">$30+</div></div></a></div></section>
-<section class="about" id="about"><div class="about-box"><img src="about-macie.jpg" alt="Macie"></div><div><div class="eyebrow">Meet By Macie</div><h2>Little details make it yours.</h2>
-<p>I’m a kindergarten teacher in Dallas, and outside of the classroom, I love creating things that are personal and unique. That’s how my love for embroidery turned into By Macie.</p>
-<p>Whether you're looking for something for game day, a gift, or something that's uniquely yours, I'd love to bring your idea to life.</p></div></section>
-<section id="custom"><div class="section-head"><h2>How it works</h2><p>Simple, personal, and made to order.</p></div><div class="steps"><div class="step"><div class="num">01</div><h3>Choose your piece</h3><p>Pick a sweatshirt, tote, makeup bag, towel, or another item you'd like personalized.</p></div><div class="step"><div class="num">02</div><h3>Send your design</h3><p>Tell me your colors, wording, team, sorority, or custom idea.</p></div><div class="step"><div class="num">03</div><h3>I make it for you</h3><p>Once your order is confirmed, your custom piece is embroidered and prepared for you.</p></div></div></section>
-<section class="cta" id="contact"><div class="eyebrow" style="color:#cfc5bd">Ready to make something?</div><h2>Let's create your custom piece.</h2><p>Use your order form for custom requests, or follow along on Instagram for new drops and game day designs.</p><div class="buttons" style="justify-content:center"><a class="btn light" style="color:#fff;border-color:#77706a" href="order.html">Custom order form</a></div></section>
-</main><footer><div>© 2026 By Macie</div><div>Custom embroidery • Dallas, TX</div></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>By Macie | Custom Embroidery</title>
+  <meta name="description" content="Custom embroidery and personalized pieces made just for you by Macie.">
+  <style>
+    :root{
+      --ink:#292522; --cream:#fbf7f1; --rose:#ead8d4; --tan:#d9c1ae;
+      --white:#fffdf9; --muted:#746d67;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--cream)}
+    a{color:inherit;text-decoration:none}
+    .top{background:var(--ink);color:white;text-align:center;padding:10px;font-size:13px;letter-spacing:.08em}
+    nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.96);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:18px 6%;border-bottom:1px solid #e8dfd6}
+    .logo img{width:180px;max-width:42vw;display:block}
+    .navlinks{display:flex;gap:28px;font-size:14px}
+    .navlinks a:hover{opacity:.55}
+    .hero{min-height:78vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:70px 7%;gap:55px}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;color:var(--muted);font-weight:bold}
+    h1{font-family:Georgia,serif;font-size:clamp(54px,7vw,92px);line-height:.92;margin:16px 0 24px;font-weight:500}
+    .hero p{font-size:18px;line-height:1.6;max-width:510px;color:#5f5853}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{padding:15px 23px;border-radius:999px;font-size:14px;font-weight:bold;display:inline-block}
+    .dark{background:var(--ink);color:white}.light{border:1px solid #cfc4bb;background:transparent}
+    .hero-card{background:var(--rose);min-height:510px;border-radius:240px 240px 25px 25px;display:flex;align-items:flex-end;justify-content:center;padding:35px;overflow:hidden}
+    .mockup{width:78%;height:390px;background:#e8e5df;border-radius:18px 18px 0 0;position:relative;box-shadow:0 15px 35px #bbaaa044}
+    .mockup:before{content:"YOUR PHOTO";position:absolute;inset:0;display:grid;place-items:center;color:#8a8179;font-size:12px;letter-spacing:.15em}
+    section{padding:90px 7%}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+    h2{font-family:Georgia,serif;font-size:48px;font-weight:500;margin:0}
+    .section-head p{max-width:440px;color:var(--muted);line-height:1.6}
+    .products{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .product{background:var(--white);border-radius:18px;overflow:hidden}
+    .photo{aspect-ratio:1/1;background:#e8e2dc;overflow:hidden;display:grid;place-items:center;color:#8d837b;font-size:11px;letter-spacing:.12em}.photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .product-info{padding:18px}.product h3{margin:0 0 8px;font-size:17px}.price{color:var(--muted);font-size:14px}
+    .about{background:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+    .about-box{background:var(--tan);min-height:420px;border-radius:20px;overflow:hidden}.about-box img{width:100%;height:100%;min-height:420px;object-fit:cover;display:block}
+    .about p{color:#625b56;line-height:1.8;font-size:17px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .step{border-top:1px solid #cfc4bb;padding-top:20px}.num{font-family:Georgia,serif;font-size:34px}
+    .cta{background:var(--ink);color:white;text-align:center}.cta p{color:#d9d2cc;max-width:550px;margin:15px auto 25px;line-height:1.6}
+    footer{padding:30px 7%;display:flex;justify-content:space-between;color:#746d67;font-size:13px}
+    @media(max-width:800px){
+      .navlinks{display:none}.hero,.about{grid-template-columns:1fr}.hero{padding-top:45px}.hero-card{min-height:400px}
+      .products{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}h2{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED WITH LOVE</div>
+
+  <nav>
+    <a class="logo" href="#"><img src="logo.png" alt="Embroidery By Macie"></a>
+    <div class="navlinks">
+      <a href="shop.html">Shop</a><a href="#custom">Custom</a><a href="about.html">About</a><a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Custom embroidery</div>
+        <h1>Made just<br>for you.</h1>
+        <p>Custom embroidered pieces, personalized designs, and more — thoughtfully made by Macie.</p>
+        <div class="buttons">
+          <a class="btn dark" href="shop.html">Shop the collection</a>
+          <a class="btn light" href="#custom">Request a custom piece</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mockup" style="background:#e5e4d5;display:flex;align-items:center;justify-content:center;padding:30px;">
+          <img src="logo.png" alt="Embroidery By Macie logo" style="width:88%;max-height:100%;object-fit:contain;">
+        </div>
+      </div>
+    </section>
+
+    <section id="shop">
+      <div class="section-head">
+        <h2>Shop favorites</h2>
+        <p>A few of my current favorites. See the full collection for details and ordering.</p>
+      </div>
+      <div class="products">
+        <a class="product" href="shop.html"><div class="photo"><img src="football-bear.jpg" alt="Football Bear sweatshirt"></div><div class="product-info"><h3>Football Bear</h3><div class="price">$30</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="pickleball-bag.jpg" alt="Custom pickleball bag"></div><div class="product-info"><h3>Custom Pickleball Bag</h3><div class="price">$30</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="custom-tote.jpg" alt="Custom tote with text"></div><div class="product-info"><h3>Custom Tote with Text</h3><div class="price">$25</div></div></a>
+        <a class="product" href="shop.html"><div class="photo"><img src="custom-design.jpg" alt="Custom embroidered designs"></div><div class="product-info"><h3>Custom Design</h3><div class="price">$30+</div></div></a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-box"><img src="custom-tote.jpg" alt="Custom By Macie tote bag"></div>
+      <div>
+        <div class="eyebrow">Meet By Macie</div>
+        <h2>Little details make it yours.</h2>
+        <p>I’m a kindergarten teacher in Dallas, and outside of the classroom, I love creating things that are personal and unique. That’s how my love for embroidery turned into By Macie.</p>
+        <p>Whether you're looking for something for game day, a gift, or something that's uniquely yours, I'd love to bring your idea to life.</p>
+      </div>
+    </section>
+
+    <section id="custom">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>Simple, personal, and made to order.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">01</div><h3>Choose your piece</h3><p>Pick a sweatshirt, tote, makeup bag, towel, or another item you'd like personalized.</p></div>
+        <div class="step"><div class="num">02</div><h3>Send your design</h3><p>Tell me your colors, wording, team, sorority, or custom idea.</p></div>
+        <div class="step"><div class="num">03</div><h3>I make it for you</h3><p>Once your order is confirmed, your custom piece is embroidered and prepared for you.</p></div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="eyebrow" style="color:#cfc5bd">Ready to make something?</div>
+      <h2>Let's create your custom piece.</h2>
+      <p>Use your order form for custom requests, or follow along on Instagram for new drops and game day designs.</p>
+      <div class="buttons" style="justify-content:center">
+        <a class="btn light" style="color:white;border-color:#77706a" href="#">Custom order form</a>
+        <a class="btn" style="background:white;color:#292522" href="#">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2026 By Macie</div>
+    <div>Custom embroidery • Dallas, TX</div>
+  </footer>
+</body>
+</html>
