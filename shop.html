@@ -4,39 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop | By Macie</title>
-<meta name="description" content="Shop custom embroidered pieces by Macie, including personalized profession bears.">
+<meta name="description" content="Shop custom embroidered pieces by Macie, including personalized healthcare bears.">
 <style>
-:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e6ddd6;--accent:#8d9c85}
-*{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
-a{color:inherit;text-decoration:none}
-.top{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:1.3px}
+:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e6ddd6}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.top{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:1.3px}
 nav{position:sticky;top:0;z-index:10;background:rgba(251,247,241,.96);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 6%;border-bottom:1px solid var(--line)}
-.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:1px}
-.navlinks{display:flex;gap:22px;align-items:center;font-size:14px}
-main{max-width:1120px;margin:0 auto;padding:56px 22px 70px}
-.intro{text-align:center;max-width:720px;margin:0 auto 42px}
+.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:1px}.navlinks{display:flex;gap:22px;align-items:center;font-size:14px}
+main{max-width:1120px;margin:0 auto;padding:56px 22px 70px}.intro{text-align:center;max-width:720px;margin:0 auto 42px}
 .eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:11px;color:var(--muted);font-weight:bold}
-h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}
-h1{font-size:clamp(38px,6vw,58px);line-height:1.08;margin:14px 0}
-.intro p{line-height:1.7;color:var(--muted);font-size:15px}
-.section-heading{margin:48px 0 20px;display:flex;justify-content:space-between;align-items:end;gap:16px}
-.section-heading h2{font-size:30px;margin:0}
-.section-heading p{color:var(--muted);font-size:13px;margin:0}
-.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
-.product{background:var(--white);border:1px solid var(--line);overflow:hidden}
-.photo{background:#f0eae3;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;display:block}
-.photo.contain img{object-fit:contain;padding:12px}
-.info{padding:20px}
-.info h3{font-family:Georgia,serif;font-weight:normal;font-size:23px;margin:0 0 7px}
-.price{font-size:14px;font-weight:bold;margin:0 0 10px}
-.desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 17px}
-.btn{display:inline-block;background:var(--ink);color:white;padding:12px 16px;font-size:12px;letter-spacing:.5px}
-.note{color:var(--muted);font-size:13px;line-height:1.7;margin-top:26px}
+h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}h1{font-size:clamp(38px,6vw,58px);line-height:1.08;margin:14px 0}
+.intro p{line-height:1.7;color:var(--muted);font-size:15px}.section-heading{margin:48px 0 20px;display:flex;justify-content:space-between;align-items:end;gap:16px}
+.section-heading h2{font-size:30px;margin:0}.section-heading p{color:var(--muted);font-size:13px;margin:0}
+.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.product{background:var(--white);border:1px solid var(--line);overflow:hidden}
+.photo{background:#f0eae3;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;overflow:hidden}.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo.contain img{object-fit:contain;padding:12px}.info{padding:20px}.info h3{font-family:Georgia,serif;font-weight:normal;font-size:23px;margin:0 0 7px}
+.price{font-size:14px;font-weight:bold;margin:0 0 10px}.desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 17px}
+.btn{display:inline-block;background:var(--ink);color:white;padding:12px 16px;font-size:12px;letter-spacing:.5px;border:0;cursor:pointer}
+.note{color:var(--muted);font-size:13px;line-height:1.7;margin-top:20px}
+.healthcare{grid-column:1/-1}.healthcare .photo{aspect-ratio:16/7}.healthcare .photo img{object-fit:contain;padding:14px}
+.product-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;padding:22px}.product-layout .preview{min-width:0}
+.product-layout .preview img{width:100%;display:block;max-height:500px;object-fit:contain;background:#f0eae3}
+.fields{display:grid;gap:15px}.fields label{display:grid;gap:7px;font-size:13px;font-weight:bold}
+.fields select{width:100%;padding:12px 10px;background:#fff;border:1px solid #cfc5bd;border-radius:0;color:var(--ink);font:inherit;font-weight:normal}
+.color-chart{margin-top:22px}.color-chart img{width:100%;height:auto;display:block;border:1px solid var(--line);background:#fff}
+.color-chart figcaption{font-size:12px;color:var(--muted);margin-top:8px}
 footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;color:var(--muted);font-size:12px}
-@media(min-width:760px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}.products.bears{grid-template-columns:repeat(2,minmax(0,1fr))}.products.bears .photo{aspect-ratio:4/3}}
-@media(max-width:560px){nav{padding:15px 18px}.navlinks{gap:12px;font-size:12px}.logo{font-size:21px}main{padding:38px 16px 54px}.products{grid-template-columns:1fr}.section-heading{align-items:start;flex-direction:column}.info{padding:17px}}
+@media(min-width:760px){.products{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){nav{padding:15px 18px}.navlinks{gap:12px;font-size:12px}.logo{font-size:21px}main{padding:38px 16px 54px}.products{grid-template-columns:1fr}.section-heading{align-items:start;flex-direction:column}.product-layout{grid-template-columns:1fr;padding:16px}.healthcare .photo{aspect-ratio:4/3}}
 </style>
 </head>
 <body>
@@ -52,26 +47,59 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
     <p>Choose from my ready-to-order favorites or pick “Custom Design” to create something completely your own.</p>
   </header>
 
-  <div class="section-heading"><h2>Profession Bear Collection</h2><p>Little bears, made personal.</p></div>
-  <p class="note">Browse the designs below for inspiration. Each bear is embroidered by hand-guided machine stitching, and personalization can be requested when you order.</p>
-  <section class="products bears" aria-label="Profession bear designs">
-    <article class="product">
-      <div class="photo contain"><img src="profession-bears-collage.jpg" alt="Four illustrated profession bears including SLP, PT, OT, and RD designs"></div>
-      <div class="info"><h3>Profession Bear Designs</h3><p class="price">Custom pricing</p><p class="desc">Explore profession options for speech-language pathologists, physical therapists, occupational therapists, dietitians, and more.</p><a class="btn" href="order.html?product=Profession%20Bear">Request Yours</a></div>
-    </article>
-    <article class="product">
-      <div class="photo contain"><img src="real-slp-sweatshirt.jpg" alt="Real embroidered SLP profession bear on a gray sweatshirt"></div>
-      <div class="info"><h3>SLP Bear — Real Embroidery</h3><p class="price">Custom pricing</p><p class="desc">A real-life example of the SLP bear stitched onto a sweatshirt. Ask about other garment colors and profession options.</p><a class="btn" href="order.html?product=SLP%20Bear%20Sweatshirt">Request Yours</a></div>
-    </article>
-    <article class="product">
-      <div class="photo contain"><img src="real-bear-cardigan.jpg" alt="Real embroidered bear holding books on a taupe cardigan"></div>
-      <div class="info"><h3>Personalized School Bear</h3><p class="price">Custom pricing</p><p class="desc">A real embroidered bear sample on a cardigan, with books and personalized initials. Details can be customized for your order.</p><a class="btn" href="order.html?product=Personalized%20School%20Bear">Request Yours</a></div>
-    </article>
-    <article class="product">
-      <div class="photo contain"><img src="vet-tech-bear.png" alt="Illustrated veterinary professional bear in sage scrubs with a dog"></div>
-      <div class="info"><h3>Veterinary Professional Bear</h3><p class="price">Custom pricing</p><p class="desc">A veterinary-themed design idea featuring sage scrubs, a stethoscope, clipboard, and a dog. Message me to request this style.</p><a class="btn" href="order.html?product=Veterinary%20Bear">Request Yours</a></div>
-    </article>
-  </section>
+  <div class="section-heading"><h2>Healthcare Bear</h2><p>Choose your design, color, and size.</p></div>
+  <article class="product healthcare">
+    <div class="product-layout">
+      <div class="preview">
+        <img src="profession-bears-collage.jpg" alt="Healthcare profession bear design options including SLP, PT, OT, and RD">
+        <figure class="color-chart">
+          <img src="healthcare-bear-colors.png" alt="Healthcare bear sweatshirt color chart showing available colors">
+          <figcaption>Use the color chart as a guide when choosing your sweatshirt color.</figcaption>
+        </figure>
+      </div>
+      <div class="info">
+        <h3>Healthcare Bear</h3>
+        <p class="price">Choose your options</p>
+        <p class="desc">Select the profession bear you want, then choose a sweatshirt color and size. If your profession isn't listed, choose “Other” and add details when you submit your request.</p>
+        <form class="fields" action="order.html" method="get">
+          <input type="hidden" name="product" value="Healthcare Bear">
+          <label for="bear">Choose your bear
+            <select id="bear" name="Bear" required>
+              <option value="" selected disabled>Select a profession</option>
+              <option>Speech-Language Pathologist (SLP)</option>
+              <option>Physical Therapist (PT)</option>
+              <option>Occupational Therapist (OT)</option>
+              <option>Registered Dietitian (RD)</option>
+              <option>Veterinary Professional</option>
+              <option>Other profession — add details</option>
+            </select>
+          </label>
+          <label for="color">Choose your color
+            <select id="color" name="Color" required>
+              <option value="" selected disabled>Select a color</option>
+              <option>Red</option><option>Fuchsia</option><option>Hot Pink</option><option>Pink</option>
+              <option>Light Pink</option><option>Coral</option><option>Orange</option><option>Golden Yellow</option>
+              <option>Yellow</option><option>Pale Yellow</option><option>Hunter Green</option><option>Dark Green</option>
+              <option>Kelly Green</option><option>Lime Green</option><option>Sage</option><option>Royal Blue</option>
+              <option>Navy Blue</option><option>Slate Blue</option><option>Teal</option><option>Turquoise</option>
+              <option>Purple</option><option>Dark Purple</option><option>Lilac</option><option>Light Lavender</option>
+              <option>Black</option><option>Charcoal Gray</option><option>Silver Gray</option><option>Chocolate Brown</option>
+              <option>Rust</option><option>Gold</option><option>Tan/Beige</option><option>Cream</option><option>White</option>
+            </select>
+          </label>
+          <label for="size">Choose your size
+            <select id="size" name="Size" required>
+              <option value="" selected disabled>Select a size</option>
+              <option>XS</option><option>S</option><option>M</option><option>L</option>
+              <option>XL</option><option>2XL</option><option>3XL</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Request Your Healthcare Bear</button>
+        </form>
+        <p class="note">Submitting these choices opens the existing order page with your selections in the URL. Please confirm your order page collects these options correctly.</p>
+      </div>
+    </div>
+  </article>
 
   <div class="section-heading"><h2>More embroidered favorites</h2><p>Ready-to-order and custom pieces</p></div>
   <section class="products" aria-label="Other embroidered products">
@@ -92,7 +120,6 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
       <div class="info"><h3>Custom Design</h3><p class="price">$30+</p><p class="desc">Have something else in mind? Choose your item, design, colors, and text and let's create it together.</p><a class="btn" href="order.html?product=Custom%20Design">Request Yours</a></div>
     </article>
   </section>
-  <p class="note">Don't see exactly what you're looking for? My Custom Design option is for anything from sweatshirts and totes to names, initials, hobbies, teams, and more.</p>
 </main>
 <footer>© 2026 By Macie • Custom embroidery • Dallas, TX</footer>
 </body>
