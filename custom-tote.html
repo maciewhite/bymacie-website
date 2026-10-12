@@ -24,11 +24,11 @@ label{display:block;font-size:13px;font-weight:bold;margin:17px 0 7px}select,inp
 <main><a class="back" href="shop.html">← Back to shop</a>
 <div class="layout">
 <div class="photo">
-<div class="gallery-main"><img id="main-tote-photo" src="tote-name-example.jpg" alt="Cream tote with green handles and a green embroidered name"></div>
+<div class="gallery-main"><img id="main-tote-photo" src="custom-tote-example.jpg" alt="White tote with custom purple writing and lavender scarf"></div>
 <div class="gallery-controls"><button type="button" onclick="changePhoto(-1)">← Previous</button><span id="photo-count" class="hint">1 of 2</span><button type="button" onclick="changePhoto(1)">Next →</button></div>
 <div class="thumbs">
-<button class="thumb" type="button" onclick="showPhoto(0)" aria-current="true" aria-label="View tote with green embroidered name"><img src="tote-name-example.jpg" alt=""></button>
-<button class="thumb" type="button" onclick="showPhoto(1)" aria-current="false" aria-label="View tote with purple custom writing"><img src="custom-tote-example.jpg" alt=""></button>
+<button class="thumb" type="button" onclick="showPhoto(0)" aria-current="true" aria-label="View tote with purple custom writing"><img src="custom-tote-example.jpg" alt=""></button>
+<button class="thumb" type="button" onclick="showPhoto(1)" aria-current="false" aria-label="View tote with green embroidered name"><img src="tote-name-example.jpg" alt=""></button>
 </div></div>
 <section>
 <h1>Custom Tote with Text</h1><p class="price">$35</p>
@@ -36,6 +36,7 @@ label{display:block;font-size:13px;font-weight:bold;margin:17px 0 7px}select,inp
 <form action="order.html" method="get">
 <input type="hidden" name="product" value="Custom Tote with Text">
 <input type="hidden" name="price" value="35">
+<label for="bag-color">Bag color</label><select id="bag-color" name="bag_color" required><option value="">Choose a bag color</option><option>Navy</option><option>Black</option><option>Light Blue</option><option>Natural</option><option>Black (Solid)</option><option>Lavender</option><option>Brown</option><option>Dark Green</option><option>Pink</option><option>Red</option><option>Lime Green</option><option>Hot Pink</option><option>Coral</option><option>Dark Gray</option><option>Yellow</option><option>Purple</option><option>Orange</option><option>Lilac</option><option>Chocolate Brown</option><option>Royal Blue</option><option>Red (Solid)</option><option>Blue (Solid)</option><option>Pink (Solid)</option><option>Green (Solid)</option><option>Columbia Blue</option><option>Burnt Orange</option><option>Neon Pink</option><option>Mustard Yellow</option><option>Bright Green</option><option>Fuchsia</option><option>Leopard</option><option>Camo</option><option>Black Checkered</option><option>Solid Green</option><option>Leopard Trim</option><option>Khaki Checkered</option><option>Navy (Solid)</option><option>Denim Blue</option><option>Camo Trim</option><option>Black Checkered Trim</option><option>Checkerboard Natural</option><option>Khaki Checkered (Solid)</option><option>Black (Solid, Quilted)</option><option>Royal Blue (Solid)</option><option>Purple (Solid)</option><option>Gray (Solid)</option><option>Light Green (Solid)</option><option>Red/White/Blue</option></select><p class="hint">Use the color chart below to choose your tote color.</p><img src="bag-color-chart.png" alt="By Macie tote bag color chart" style="display:block;width:100%;height:auto;border:1px solid var(--line);margin:10px 0 22px">
 <label for="stitch-color">Stitch color</label>
 <select id="stitch-color" name="stitch_color" required>
 <option value="">Choose a stitch color</option><option>Black</option><option>White</option><option>Cream</option><option>Gray</option><option>Brown</option><option>Red</option><option>Pink</option><option>Hot pink</option><option>Orange</option><option>Yellow</option><option>Green</option><option>Sage green</option><option>Blue</option><option>Navy</option><option>Purple</option><option>Lavender</option><option>Custom / other color</option>
@@ -58,8 +59,8 @@ function toggleWriting(){
  document.getElementById('custom-text').required=type==='Custom writing';
 }
 const totePhotos=[
- {src:'tote-name-example.jpg',alt:'Cream tote with green handles and a green embroidered name'},
- {src:'custom-tote-example.jpg',alt:'White tote with custom purple writing and lavender scarf'}
+ {src:'custom-tote-example.jpg',alt:'White tote with custom purple writing and lavender scarf'},
+ {src:'tote-name-example.jpg',alt:'Cream tote with green handles and a green embroidered name'}
 ];
 let currentPhoto=0;
 function showPhoto(index){
