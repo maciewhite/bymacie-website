@@ -19,6 +19,11 @@ h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}h1{font-siz
 .info{padding:20px}.info h2,.info h3{font-family:Georgia,serif;font-weight:normal;font-size:23px;margin:0 0 7px}
 .price{font-size:14px;font-weight:bold;margin:0 0 10px}.desc{font-size:14px;line-height:1.6;color:var(--muted);margin:0 0 17px}
 .btn{display:inline-block;background:var(--ink);color:white;padding:12px 16px;font-size:12px;letter-spacing:.5px}
+.product-options{padding:0 20px 20px;display:grid;gap:10px}
+.product-options label{display:grid;gap:5px;font-size:12px;color:var(--muted)}
+.product-options select,.product-options input{width:100%;padding:10px;border:1px solid var(--line);background:#fffdf9;color:var(--ink);font:inherit;font-size:13px}
+.product-options .btn{border:0;cursor:pointer;justify-self:start}
+@media(max-width:560px){.product-options{padding:0 17px 17px}}
 footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;color:var(--muted);font-size:12px}
 @media(max-width:760px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){nav{padding:15px 18px}.navlinks{gap:12px;font-size:12px}.logo{font-size:21px}main{padding:38px 16px 54px}.products{grid-template-columns:1fr}.info{padding:17px}}
@@ -39,11 +44,56 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
   <section class="products" aria-label="Shop products">
     <article class="product">
       <div class="photo"><img src="football-bear.jpg" alt="Embroidered football bear sweatshirt"></div>
-      <div class="info"><h3>Football Bear</h3><p class="price">$35</p><p class="desc">A cute embroidered football bear for game day.</p><a class="btn" href="order.html?product=Football%20Bear">Order Now</a></div>
+      <div class="info"><h3>Football Bear</h3><p class="price">$35</p><p class="desc">A cute embroidered football bear for game day.</p><form class="product-options" action="order.html" method="get">
+          <input type="hidden" name="product" value="Football Bear">
+          <label>Shirt color
+            <select name="shirtColor" required>
+              <option value="">Choose a shirt color</option>
+              <option>Gray</option><option>White</option><option>Black</option><option>Navy</option><option>Pink</option><option>Other</option>
+            </select>
+          </label>
+          <label>Size
+            <select name="size" required>
+              <option value="">Choose a size</option>
+              <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option>
+            </select>
+          </label>
+          <label>Bear customization
+            <select name="customization" required>
+              <option value="">Choose customization</option>
+              <option>As pictured</option><option>Custom colors</option><option>Custom number or text</option>
+            </select>
+          </label>
+          <button class="btn" type="submit">Order Now</button>
+        </form></div>
     </article>
     <article class="product">
       <div class="photo"><img src="pickleball-bag.jpg" alt="Custom embroidered pickleball bag with name"></div>
-      <div class="info"><h3>Custom Pickleball Bag with Name</h3><p class="price">$30+</p><p class="desc">A personalized pickleball bag embroidered with the name of your choice.</p><a class="btn" href="order.html?product=Custom%20Pickleball%20Bag%20with%20Name">Order Now</a></div>
+      <div class="info"><h3>Custom Pickleball Bag with Name</h3><p class="price">$30+</p><p class="desc">A personalized pickleball bag embroidered with the name of your choice.</p><form class="product-options" action="order.html" method="get">
+          <input type="hidden" name="product" value="Custom Pickleball Bag with Name">
+          <label>Bag color
+            <select name="bagColor" required>
+              <option value="">Choose a bag color</option>
+              <option>Natural with green handles</option><option>Natural with navy handles</option><option>Black</option><option>Other</option>
+            </select>
+          </label>
+          <label>Stitch color
+            <select name="stitchColor" required>
+              <option value="">Choose a stitch color</option>
+              <option>Green</option><option>Black</option><option>White</option><option>Navy</option><option>Pink</option><option>Other</option>
+            </select>
+          </label>
+          <label>Personalization
+            <select name="personalization" required>
+              <option value="">Choose personalization</option>
+              <option>Name</option><option>Custom wording</option>
+            </select>
+          </label>
+          <label>Text to embroider
+            <input type="text" name="text" placeholder="Enter name or wording" required>
+          </label>
+          <button class="btn" type="submit">Order Now</button>
+        </form></div>
     </article>
     <article class="product">
       <div class="photo"><img src="tote-name-example.jpg?v=3" alt="White tote with green handles and the name Macie embroidered in green"></div>
