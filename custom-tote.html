@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Tote | By Macie</title>
+<style>
+:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e6ddd6;--accent:#8d9c85}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}
+.top{background:var(--ink);color:white;text-align:center;padding:10px;font-size:12px;letter-spacing:1.3px}nav{display:flex;justify-content:space-between;align-items:center;padding:18px 6%;border-bottom:1px solid var(--line)}.logo{font:25px Georgia,serif;letter-spacing:1px}.navlinks{display:flex;gap:22px;font-size:14px}
+main{max-width:1000px;margin:0 auto;padding:42px 20px 70px}.layout{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:start}.photo img{display:block;width:100%;height:auto;border:1px solid var(--line)}h1{font:normal clamp(32px,5vw,44px) Georgia,serif;margin:0 0 8px}.price{font-weight:bold;margin:0 0 14px}.desc{color:var(--muted);line-height:1.7;font-size:14px;margin-bottom:25px}
+label{display:block;font-size:13px;font-weight:bold;margin:17px 0 7px}select,input,textarea{width:100%;padding:12px;border:1px solid #d7cec5;background:#fffdf9;color:var(--ink);font:14px Arial;border-radius:0}textarea{min-height:95px;resize:vertical}.hint{font-size:12px;color:var(--muted);line-height:1.5;margin-top:6px}.btn{margin-top:22px;border:0;background:var(--ink);color:white;padding:14px 18px;font-size:12px;letter-spacing:.5px;cursor:pointer;width:100%}.back{display:inline-block;margin-bottom:24px;font-size:13px;text-decoration:underline}
+@media(max-width:700px){.layout{grid-template-columns:1fr;gap:25px}nav{padding:15px 18px}.navlinks{gap:12px;font-size:12px}.logo{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED BY MACIE</div>
+<nav><a class="logo" href="index.html">By Macie</a><div class="navlinks"><a href="shop.html">Shop</a><a href="index.html#custom">Custom</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
+<main><a class="back" href="shop.html">← Back to shop</a>
+<div class="layout">
+<div class="photo"><img src="custom-tote-example.jpg" alt="Example of a white tote embroidered with purple writing and styled with a lavender scarf"></div>
+<section>
+<h1>Custom Tote with Text</h1><p class="price">$35</p>
+<p class="desc">Personalize a tote with your choice of stitch color, size, and wording. The photo is an example of the finished style; scarf is for styling inspiration and is not included.</p>
+<form action="order.html" method="get">
+<input type="hidden" name="product" value="Custom Tote with Text">
+<input type="hidden" name="price" value="35">
+<label for="stitch-color">Stitch color</label>
+<select id="stitch-color" name="stitch_color" required>
+<option value="">Choose a stitch color</option><option>Black</option><option>White</option><option>Cream</option><option>Gray</option><option>Brown</option><option>Red</option><option>Pink</option><option>Hot pink</option><option>Orange</option><option>Yellow</option><option>Green</option><option>Sage green</option><option>Blue</option><option>Navy</option><option>Purple</option><option>Lavender</option><option>Custom / other color</option>
+</select>
+<label for="tote-size">Tote size</label>
+<select id="tote-size" name="tote_size" required><option value="">Choose a tote size</option><option value="Mini tote">Mini tote</option><option value="Large tote">Large tote</option></select>
+<label for="writing-type">Personalization</label>
+<select id="writing-type" name="writing_type" required onchange="toggleWriting()"><option value="">Choose one</option><option value="Name">Name</option><option value="Custom writing">Custom writing</option></select>
+<div id="name-wrap" hidden><label for="name-text">Name to embroider</label><input id="name-text" name="name_text" type="text" placeholder="Enter name"></div>
+<div id="custom-wrap" hidden><label for="custom-text">Custom writing</label><textarea id="custom-text" name="custom_text" placeholder="Enter the exact wording"></textarea><p class="hint">Longer wording may need a quick design confirmation before stitching.</p></div>
+<label for="notes">Extra notes (optional)</label><textarea id="notes" name="notes" placeholder="Anything else you'd like me to know?"></textarea>
+<button class="btn" type="submit">Continue to order</button>
+</form></section></div></main>
+<script>
+function toggleWriting(){
+ const type=document.getElementById('writing-type').value;
+ const nw=document.getElementById('name-wrap'), cw=document.getElementById('custom-wrap');
+ nw.hidden=type!=='Name'; cw.hidden=type!=='Custom writing';
+ document.getElementById('name-text').required=type==='Name';
+ document.getElementById('custom-text').required=type==='Custom writing';
+}
+</script>
+</body></html>
