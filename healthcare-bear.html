@@ -13,7 +13,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:20px;paddi
 main{max-width:1100px;margin:0 auto;padding:42px 22px 70px}.back{font-size:13px;color:var(--muted)}
 h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}h1{font-size:clamp(36px,5vw,52px);margin:18px 0 8px}
 .lead{color:var(--muted);line-height:1.7;max-width:700px}.layout{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;margin-top:28px}
-.gallery img{width:100%;display:block;object-fit:contain;background:#f0eae3}.hero-img{aspect-ratio:1/1}.gallery-main{position:relative}.gallery-main img{aspect-ratio:1/1}.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);border:0;border-radius:50%;width:42px;height:42px;background:rgba(255,253,249,.92);color:var(--ink);font-size:24px;cursor:pointer;box-shadow:0 2px 8px #0002}.gallery-arrow.prev{left:12px}.gallery-arrow.next{right:12px}.gallery-caption{text-align:center;font-size:13px;color:var(--muted);padding:10px}.samples{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:10px}.samples button{padding:0;border:2px solid transparent;background:#f0eae3;cursor:pointer}.samples button.active{border-color:var(--ink)}.samples img{aspect-ratio:1/1}.samples button span{display:block;font-size:10px;padding:5px 2px;color:var(--ink)}
+.gallery img{width:100%;display:block;object-fit:contain;background:#f0eae3}.hero-img{aspect-ratio:1/1}.gallery-main{position:relative}.gallery-main img{aspect-ratio:1/1}.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);border:0;border-radius:50%;width:42px;height:42px;background:rgba(255,253,249,.92);color:var(--ink);font-size:24px;cursor:pointer;box-shadow:0 2px 8px #0002}.gallery-arrow.prev{left:12px}.gallery-arrow.next{right:12px}.gallery-caption{text-align:center;font-size:13px;color:var(--muted);padding:10px}.samples{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:10px}.samples button{padding:0;border:2px solid transparent;background:#f0eae3;cursor:pointer}.samples button.active{border-color:var(--ink)}.samples img{aspect-ratio:1/1}.samples button span{display:block;font-size:10px;padding:5px 2px;color:var(--ink)}
 .chart{margin-top:22px}.chart h2{font-size:25px;margin:0 0 10px}.chart img{width:100%;height:auto;background:white;border:1px solid var(--line)}
 form{background:var(--white);border:1px solid var(--line);padding:24px}.price{font-weight:bold;margin:0 0 10px}.desc{font-size:14px;line-height:1.6;color:var(--muted)}
 label{display:grid;gap:7px;margin:18px 0;font-size:13px;font-weight:bold}
@@ -41,8 +41,9 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
       <div class="gallery-caption" id="galleryCaption">SLP Bear — real embroidery</div>
       <div class="samples" aria-label="Click to view a picture">
         <button type="button" class="active" data-src="real-slp-sweatshirt.jpg" data-alt="Real embroidered SLP bear on a sweatshirt" data-caption="SLP Bear — real embroidery"><img src="real-slp-sweatshirt.jpg" alt=""><span>SLP Bear</span></button>
-        <button type="button" data-src="profession-bears-collage.jpg" data-alt="Illustrated healthcare profession bear options" data-caption="Profession options"><img src="profession-bears-collage.jpg" alt=""><span>Bear Options</span></button>
-        <button type="button" data-src="real-bear-cardigan.jpg" data-alt="Real embroidered bear on a cardigan" data-caption="Real embroidered example"><img src="real-bear-cardigan.jpg" alt=""><span>Real Example</span></button>
+        <button type="button" data-src="rd-bear.png" data-alt="Registered dietitian bear design" data-caption="Registered Dietitian (RD) bear"><img src="rd-bear.png" alt=""><span>RD Bear</span></button>
+        <button type="button" data-src="ot-bear.png" data-alt="Occupational therapist bear design" data-caption="Occupational Therapist (OT) bear"><img src="ot-bear.png" alt=""><span>OT Bear</span></button>
+        <button type="button" data-src="pt-bear.png" data-alt="Physical therapist bear design" data-caption="Physical Therapist (PT) bear"><img src="pt-bear.png" alt=""><span>PT Bear</span></button>
         <button type="button" data-src="vet-tech-bear.png" data-alt="Veterinary professional bear design" data-caption="Veterinary professional design"><img src="vet-tech-bear.png" alt=""><span>Vet Tech</span></button>
         <button type="button" data-src="healthcare-bear-colors.png" data-alt="Healthcare bear sweatshirt color chart" data-caption="Sweatshirt color chart"><img src="healthcare-bear-colors.png" alt=""><span>Color Chart</span></button>
       </div>
@@ -51,8 +52,15 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
     <section>
       <form action="order.html" method="get">
         <input type="hidden" name="product" value="Healthcare Bear">
-        <p class="price">Healthcare Bear</p>
+        <p class="price" id="priceDisplay">Healthcare Bear — $35</p>
+        <input type="hidden" name="Price" id="priceValue" value="$35">
         <p class="desc">Select all options before requesting your order.</p>
+        <label for="designType">Choose standard or custom
+          <select id="designType" name="Design Type" required>
+            <option value="Standard" data-price="35" selected>Standard design — $35</option>
+            <option value="Custom" data-price="45">Custom design — $45</option>
+          </select>
+        </label>
         <label for="bear">Choose your bear
           <select id="bear" name="Bear" required>
             <option value="" selected disabled>Select a profession</option>
@@ -99,6 +107,14 @@ footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;colo
   const buttons = Array.from(document.querySelectorAll('.samples button'));
   const mainImage = document.getElementById('galleryImage');
   const caption = document.getElementById('galleryCaption');
+  const designType = document.getElementById('designType');
+  const priceDisplay = document.getElementById('priceDisplay');
+  const priceValue = document.getElementById('priceValue');
+  designType.addEventListener('change', () => {
+    const price = designType.options[designType.selectedIndex].dataset.price;
+    priceDisplay.textContent = 'Healthcare Bear — $' + price;
+    priceValue.value = '$' + price;
+  });
   let current = 0;
   function show(index){
     current = (index + buttons.length) % buttons.length;
