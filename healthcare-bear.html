@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Healthcare Bear | By Macie</title>
+<style>
+:root{--ink:#292522;--cream:#fbf7f1;--white:#fffdf9;--muted:#746d67;--line:#e6ddd6}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.top{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:1.3px}
+nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px 6%;border-bottom:1px solid var(--line);background:var(--cream)}
+.logo{font-family:Georgia,serif;font-size:25px;letter-spacing:1px}.navlinks{display:flex;gap:22px;font-size:14px}
+main{max-width:1100px;margin:0 auto;padding:42px 22px 70px}.back{font-size:13px;color:var(--muted)}
+h1,h2{font-family:Georgia,'Times New Roman',serif;font-weight:normal}h1{font-size:clamp(36px,5vw,52px);margin:18px 0 8px}
+.lead{color:var(--muted);line-height:1.7;max-width:700px}.layout{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;margin-top:28px}
+.gallery img{width:100%;display:block;object-fit:contain;background:#f0eae3}.hero-img{aspect-ratio:1/1}.samples{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}.samples img{aspect-ratio:1/1}
+.chart{margin-top:22px}.chart h2{font-size:25px;margin:0 0 10px}.chart img{width:100%;height:auto;background:white;border:1px solid var(--line)}
+form{background:var(--white);border:1px solid var(--line);padding:24px}.price{font-weight:bold;margin:0 0 10px}.desc{font-size:14px;line-height:1.6;color:var(--muted)}
+label{display:grid;gap:7px;margin:18px 0;font-size:13px;font-weight:bold}
+select,input,textarea{width:100%;padding:12px;border:1px solid #cfc5bd;background:#fff;color:var(--ink);font:inherit;font-weight:normal}
+textarea{min-height:90px;resize:vertical}.btn{display:inline-block;background:var(--ink);color:#fff;border:0;padding:13px 16px;font-size:12px;letter-spacing:.5px;cursor:pointer;width:100%;margin-top:5px}
+.small{font-size:12px;color:var(--muted);line-height:1.6}
+footer{border-top:1px solid var(--line);padding:26px 20px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:720px){nav{padding:15px 18px}.navlinks{gap:12px;font-size:12px}.logo{font-size:21px}main{padding:28px 16px 54px}.layout{grid-template-columns:1fr}.samples{gap:7px}form{padding:18px}}
+</style>
+</head>
+<body>
+<div class="top">CUSTOM • MADE-TO-ORDER • EMBROIDERED BY MACIE</div>
+<nav><a class="logo" href="index.html">By Macie</a><div class="navlinks"><a href="shop.html">Shop</a><a href="index.html#custom">Custom</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
+<main>
+  <a class="back" href="shop.html">← Back to shop</a>
+  <h1>Healthcare Bear</h1>
+  <p class="lead">Choose your profession bear, sweatshirt color, and size. Browse the examples and use the color chart as a guide.</p>
+  <div class="layout">
+    <section class="gallery" aria-label="Healthcare bear photos">
+      <img class="hero-img" src="profession-bears-collage.jpg" alt="Illustrated healthcare profession bear options">
+      <div class="samples">
+        <img src="real-slp-sweatshirt.jpg" alt="Real embroidered SLP bear on a sweatshirt">
+        <img src="real-bear-cardigan.jpg" alt="Real embroidered bear on a cardigan">
+        <img src="vet-tech-bear.png" alt="Veterinary professional bear design">
+      </div>
+      <div class="chart"><h2>Available Colors</h2><img src="healthcare-bear-colors.png" alt="Healthcare bear color chart"><p class="small">Choose the closest color name from the dropdown. If you are unsure, contact me before ordering.</p></div>
+    </section>
+    <section>
+      <form action="order.html" method="get">
+        <input type="hidden" name="product" value="Healthcare Bear">
+        <p class="price">Healthcare Bear</p>
+        <p class="desc">Select all options before requesting your order.</p>
+        <label for="bear">Choose your bear
+          <select id="bear" name="Bear" required>
+            <option value="" selected disabled>Select a profession</option>
+            <option>Speech-Language Pathologist (SLP)</option>
+            <option>Physical Therapist (PT)</option>
+            <option>Occupational Therapist (OT)</option>
+            <option>Registered Dietitian (RD)</option>
+            <option>Veterinary Professional</option>
+            <option>Other profession — add details below</option>
+          </select>
+        </label>
+        <label for="color">Choose your sweatshirt color
+          <select id="color" name="Color" required>
+            <option value="" selected disabled>Select a color</option>
+            <option>Red</option><option>Fuchsia</option><option>Hot Pink</option><option>Pink</option>
+            <option>Light Pink</option><option>Coral</option><option>Orange</option><option>Golden Yellow</option>
+            <option>Yellow</option><option>Pale Yellow</option><option>Hunter Green</option><option>Dark Green</option>
+            <option>Kelly Green</option><option>Lime Green</option><option>Sage</option><option>Royal Blue</option>
+            <option>Navy Blue</option><option>Slate Blue</option><option>Teal</option><option>Turquoise</option>
+            <option>Purple</option><option>Dark Purple</option><option>Lilac</option><option>Light Lavender</option>
+            <option>Black</option><option>Charcoal Gray</option><option>Silver Gray</option><option>Chocolate Brown</option>
+            <option>Rust</option><option>Gold</option><option>Tan/Beige</option><option>Cream</option><option>White</option>
+          </select>
+        </label>
+        <label for="size">Choose your size
+          <select id="size" name="Size" required>
+            <option value="" selected disabled>Select a size</option>
+            <option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>2XL</option><option>3XL</option>
+          </select>
+        </label>
+        <label for="details">Personalization or other profession (optional)
+          <textarea id="details" name="Details" placeholder="Add name, initials, or profession details"></textarea>
+        </label>
+        <button class="btn" type="submit">Request Your Healthcare Bear</button>
+        <p class="small">This sends your selections to the existing order page as URL parameters. Test that your order page captures these details before taking customer orders.</p>
+      </form>
+    </section>
+  </div>
+</main>
+<footer>© 2026 By Macie • Custom embroidery • Dallas, TX</footer>
+</body>
+</html>
